@@ -1,14 +1,4 @@
 print ("                           Juego de Gato                             ")
-import time
-import pickle
-from sys import stdout
-
-stdout.write("Loading")
-def loaddot(n):
-    for x in range (n):
-        stdout.write(".")
-        time.sleep(.5)
-loaddot(5)
 print (" ")
 input("Presione Enter para comenzar")
 print ("El Jugador 1 es X")
