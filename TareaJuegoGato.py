@@ -11,31 +11,31 @@ jugador2 = 'Jugador 2'
 juego = 0
 board = ["1","2","3","4","5","6","7","8","9"]
 def Tablero():
-    print (" %s| %s| %s" %(board[0],board[1],board[2]))
+    print (" {}| {}| {}".format(board[0],board[1],board[2]))
+    print("---------")
+    print (" {}| {}| {}".format(board[3],board[4],board[5]))
     print ("---------")
-    print (" %s| %s| %s" % (board[3],board[4],board[5]))
-    print ("---------")
-    print (" %s| %s| %s" % (board[6],board[7],board[8]))
+    print (" {}| {}| {}".format(board[6],board[7],board[8]))
     print(" ")
     return " "
 
 
-def Ganadorsi(jugada):
-    if board[0] == jugada and board[1] == jugada and board[2] == jugada:
+def Ganadorsi(XO):
+    if board[0] == XO and board[1] == XO and board[2] == XO:
         return True
-    if board[3] == jugada and board[4] == jugada and board[5] == jugada:
+    if board[3] == XO and board[4] == XO and board[5] == XO:
         return True
-    if board[6] == jugada and board[7] == jugada and board[8] == jugada:
+    if board[6] == XO and board[7] == XO and board[8] == XO:
         return True
-    if board[0] == jugada and board[3] == jugada and board[6] == jugada:
+    if board[0] == XO and board[3] == XO and board[6] == XO:
         return True
-    if board[1] == jugada and board[4] == jugada and board[7] == jugada:
+    if board[1] == XO and board[4] == XO and board[7] == XO:
         return True
-    if board[2] == jugada and board[5] == jugada and board[8] == jugada:
+    if board[2] == XO and board[5] == XO and board[8] == XO:
         return True
-    if board[0] == jugada and board[4] == jugada and board[8] == jugada:
+    if board[0] == XO and board[4] == XO and board[8] == XO:
         return True
-    if board[6] == jugada and board[4] == jugada and board[2] == jugada:
+    if board[6] == XO and board[4] == XO and board[2] == XO:
         return True
     return False
 
@@ -72,7 +72,7 @@ while (juego == 0):
 
     if juegoganado == True:
         print (Tablero())
-        print("Felicitaciones %s ganaste el juego!" % ganador)
+        print("Felicitaciones {} ganaste el juego!".format(ganador))
     else:
         print (" ")
         print("Esto ha sido un empate...")
